@@ -1,0 +1,50 @@
+name: budget_app
+description: A complete Flutter Finance Tracker (Budget App) with savings, expenses, statistics and planning features.
+publish_to: 'none' # Remove this line if you want to publish to pub.dev
+version: 1.0.0+1
+
+# 适配的Flutter SDK版本（兼容主流稳定版）
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+  flutter: '>=3.13.0'
+
+# 核心依赖（所有功能所需的库，版本均为稳定版）
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6 # iOS风格图标
+
+  animations: ^2.0.11 # 页面切换动画（增强用户体验）
+
+  # 本地存储（保存交易/储蓄目标/财务计划数据）
+  shared_preferences: ^2.2.2
+  
+  # 图表展示（统计页面的收入/支出折线图）
+  fl_chart: ^0.65.0
+  
+  # 日期格式化（处理交易/计划的日期显示）
+  intl: ^0.18.1
+  
+  # 生成唯一ID（给每个交易/目标/计划分配唯一标识）
+  uuid: ^4.2.1
+  
+  # 侧滑删除（交易/目标/计划的删除操作）
+  flutter_slidable: ^3.0.1
+
+# 开发依赖（测试/代码规范）
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0 # 代码规范检查
+
+# Flutter配置（启用Material图标）
+flutter:
+  uses-material-design: true
+
+  # 若你需要添加本地资源（如图片/字体），可在此配置，示例：
+  # assets:
+  #   - assets/images/
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: fonts/Roboto-Regular.ttf
